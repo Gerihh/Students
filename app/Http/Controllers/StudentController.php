@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateStudentRequest;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator as FacadesValidator;
+use Illuminate\Support\Facades\Validator;
 
 class StudentController extends Controller
 {
@@ -21,6 +24,27 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        Validator::make($request->all(), [
+            "first_name" => "required|min:4",
+                "last_name" => "required",
+                "email" => "required|email|unique:students,email",
+                "rank" => "integer"
+        ], [
+            "required"=> "A mező kitöltése kötelező",
+            "email" => "Emailt kell megadni",
+            "email.unique" =>"Ez az email már foglalt",
+            "first_name.min"=> "Minimum 4 betűs név kell"
+        ])->validate();
+
+       /* $request->validate(
+            [
+                "first_name" => "required|min:4",
+                "last_name" => "required",
+                "email" => "required|email|unique:students,email",
+                "rank" => "integer"
+            ]);
+            */
+
         $student = Student::create($request->all());
        /* $student = Student::create([
             "first_name"=> $student->first_name,

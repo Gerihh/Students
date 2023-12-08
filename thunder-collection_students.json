@@ -1,0 +1,155 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "students",
+    "dateExported": "2023-12-08T11:48:34.119Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "29911360-574b-4841-9961-8d055fac466d",
+            "colId": "c1543efb-d3ca-4d79-8827-c5404efe4fcb",
+            "containerId": "",
+            "name": "GET ALL Students",
+            "url": "http://127.0.0.1:8000/api/Student",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-12-01T11:49:04.782Z",
+            "modified": "2023-12-01T11:51:18.827Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "67781966-268e-45d1-94f1-7c2640221f69",
+            "colId": "c1543efb-d3ca-4d79-8827-c5404efe4fcb",
+            "containerId": "",
+            "name": "GET Student by ID",
+            "url": "http://127.0.0.1:8000/api/Student/101",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-12-01T11:51:44.534Z",
+            "modified": "2023-12-01T12:21:34.221Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "983a3972-1f1f-45d8-b801-fcf317e49d67",
+            "colId": "c1543efb-d3ca-4d79-8827-c5404efe4fcb",
+            "containerId": "",
+            "name": "UPDATE Student by ID",
+            "url": "http://127.0.0.1:8000/api/Student/101",
+            "method": "PATCH",
+            "sortNum": 25000,
+            "created": "2023-12-01T12:21:05.819Z",
+            "modified": "2023-12-01T12:22:24.403Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\": \"asd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6876c036-6fa4-426f-8052-9790a5c46256",
+            "colId": "c1543efb-d3ca-4d79-8827-c5404efe4fcb",
+            "containerId": "",
+            "name": "DELETE Student by ID",
+            "url": "http://127.0.0.1:8000/api/Student/10",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-12-01T12:00:46.444Z",
+            "modified": "2023-12-01T12:01:22.903Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0c664f58-239f-43cc-b02b-ccb261e26de1",
+            "colId": "c1543efb-d3ca-4d79-8827-c5404efe4fcb",
+            "containerId": "",
+            "name": "CREATE Student",
+            "url": "http://127.0.0.1:8000/api/Student",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-12-01T12:07:05.180Z",
+            "modified": "2023-12-01T12:10:13.420Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\": \"asd\",\n  \"last_name\": \"asd\",\n  \"email\": \"asd@gmail.com\",\n  \"rank\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
