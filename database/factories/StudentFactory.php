@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,11 +17,13 @@ class StudentFactory extends Factory
      */
     public function definition(): array
     {
+        $teams = Team::all();
         return [
             "first_name"=> $this->faker->firstName,
             "last_name"=> $this->faker->lastName,
             "email"=> $this->faker->safeEmail,
             "rank"=> $this->faker->numberBetween(1,100),
+            "team_id" => $teams->Str::random(),
         ];
     }
 }
